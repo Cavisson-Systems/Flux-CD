@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
-  path: application/boutique-app-1791205336986/services/boutique
+  path: boutique-fluxcd
   prune: true
   sourceRef:
     kind: GitRepository
