@@ -7,7 +7,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: helm-chart/
+      chart: microservices-demo/helm-chart/
       sourceRef:
         kind: GitRepository
         name: boutique
