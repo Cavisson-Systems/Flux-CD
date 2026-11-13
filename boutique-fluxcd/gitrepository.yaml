@@ -5,6 +5,6 @@ metadata:
   namespace: boutique
 spec:
   interval: 5m
-  url: https://github.com/Shiv0308/microservices-demo.git
+  url: https://github.com/Cavisson-Systems/BoutiqueAppCloud245.git
   ref:
-    branch: helm/Test
+    branch: BoutiqueApp
