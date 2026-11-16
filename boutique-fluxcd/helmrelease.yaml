@@ -8,6 +8,7 @@ spec:
   chart:
     spec:
       chart: microservices-demo/helm-chart/
+      reconcileStrategy: Revision
       sourceRef:
         kind: GitRepository
         name: boutique
@@ -27,6 +28,7 @@ spec:
   chart:
     spec:
       chart: ./
+      reconcileStrategy: Revision
       sourceRef:
         kind: GitRepository
         name: cavisson-agent
