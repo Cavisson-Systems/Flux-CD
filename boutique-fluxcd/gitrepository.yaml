@@ -8,3 +8,14 @@ spec:
   url: https://github.com/Cavisson-Systems/BoutiqueAppCloud245.git
   ref:
     branch: BoutiqueApp
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: cavisson-agent
+  namespace: cavisson
+spec:
+  interval: 5m
+  url: https://github.com/Cavisson-Systems/BoutiqueAppCloud245.git
+  ref:
+    branch: CavissonAgent
