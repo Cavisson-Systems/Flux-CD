@@ -12,6 +12,24 @@ spec:
       sourceRef:
         kind: GitRepository
         name: boutique
+  dependsOn:                          # wait until the agent upgrade is done
+    - name: cavisson-agent
+      namespace: cavisson
+  postRenderers:                      # stamp agent version on every boutique pod
+    - kustomize:
+        patches:
+          - target:
+              kind: Deployment
+            patch: |
+              apiVersion: apps/v1
+              kind: Deployment
+              metadata:
+                name: any
+              spec:
+                template:
+                  metadata:
+                    annotations:
+                      cavisson.io/agent-version: "${AGENT_VERSION}"
 
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
@@ -28,3 +46,24 @@ spec:
       sourceRef:
         kind: GitRepository
         name: cavisson-agent
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+      remediateLastFailure: true
+    cleanupOnFail: true
+  values:
+    cmon:
+      image:
+        tag: "${AGENT_VERSION}"
+    cavproxy:
+      image:
+        tag: "${AGENT_VERSION}"
+    webhook:
+      image:
+        tag: "${AGENT_VERSION}"
+    clusterAgent:
+      image:
+        tag: test4
