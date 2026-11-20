@@ -12,4 +12,4 @@ spec:
     name: flux-system
   postBuild:
     substitute:
-      AGENT_VERSION: "4.16.0.B92"     # ← the only line you change for an agent upgrade
+      AGENT_VERSION: "4.16.0.B90"     # ← the only line you change for an agent upgrade
