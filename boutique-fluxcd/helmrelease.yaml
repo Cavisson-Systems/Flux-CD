@@ -29,7 +29,7 @@ spec:
                 template:
                   metadata:
                     annotations:
-                      cavisson.io/agent-version: "${AGENT_VERSION}"
+                      cavisson.io/agent-version: "4.16.0.B93"   # cavisson-ci: agent-version
 
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
@@ -57,13 +57,13 @@ spec:
   values:
     cmon:
       image:
-        tag: "${AGENT_VERSION}"
+        tag: "4.16.0.B93"   # cavisson-ci: agent-version
     cavproxy:
       image:
-        tag: "${AGENT_VERSION}"
+        tag: "4.16.0.B93"   # cavisson-ci: agent-version
     webhook:
       image:
-        tag: "${AGENT_VERSION}"
+        tag: "4.16.0.B93"   # cavisson-ci: agent-version
     clusterAgent:
       image:
         tag: testzap
