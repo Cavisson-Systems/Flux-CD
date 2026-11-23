@@ -10,6 +10,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  postBuild:
-    substitute:
-      AGENT_VERSION: "4.16.0.B93"     # ← the only line you change for an agent upgrade
+  # The agent version is a plain value in helmrelease.yaml (lines marked "# cavisson-ci: agent-version"),
+  # set by Cavisson_CI_CD; no postBuild substitution.
