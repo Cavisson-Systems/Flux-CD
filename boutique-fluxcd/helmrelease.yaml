@@ -66,4 +66,4 @@ spec:
         tag: "${AGENT_VERSION}"
     clusterAgent:
       image:
-        tag: testzap
+        tag: "${AGENT_VERSION}"
