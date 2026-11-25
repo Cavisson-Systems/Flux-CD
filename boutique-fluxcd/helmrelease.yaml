@@ -57,13 +57,13 @@ spec:
   values:
     cmon:
       image:
-        tag: "${AGENT_VERSION}"
+        tag: "4.16.0.B94"
     cavproxy:
       image:
-        tag: "${AGENT_VERSION}"
+        tag: "4.16.0.B94"
     webhook:
       image:
-        tag: "${AGENT_VERSION}"
+        tag: "4.16.0.B94"
     clusterAgent:
       image:
-        tag: "${AGENT_VERSION}"
+        tag: "4.16.0.B94"
