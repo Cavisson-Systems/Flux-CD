@@ -7,7 +7,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: microservices-demo/helm-chart/
+      chart: microservices-demo/release/
       reconcileStrategy: Revision
       sourceRef:
         kind: GitRepository
