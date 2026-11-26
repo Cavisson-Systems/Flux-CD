@@ -5,3 +5,4 @@ resources:
   - gitrepository.yaml
   - helmrelease.yaml
   - flux-kustomization.yaml
+  - boutique-kustomization.yaml
