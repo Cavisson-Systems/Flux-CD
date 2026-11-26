@@ -29,7 +29,7 @@ spec:
                 template:
                   metadata:
                     annotations:
-                      cavisson.io/agent-version: "${AGENT_VERSION}"
+                      cavisson.io/agent-version: "4.16.0.B94"
 
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
