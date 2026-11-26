@@ -5,7 +5,7 @@ metadata:
   namespace: boutique
 spec:
   interval: 5m
-  path: ./microservices-demo/release
+  path: ./microservices-demo/kubernetes-manifests
   prune: true
   sourceRef:
     kind: GitRepository
