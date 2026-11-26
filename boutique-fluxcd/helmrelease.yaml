@@ -12,24 +12,6 @@ spec:
       sourceRef:
         kind: GitRepository
         name: boutique
-  dependsOn:                          # wait until the agent upgrade is done
-    - name: cavisson-agent
-      namespace: cavisson
-  postRenderers:                      # stamp agent version on every boutique pod
-    - kustomize:
-        patches:
-          - target:
-              kind: Deployment
-            patch: |
-              apiVersion: apps/v1
-              kind: Deployment
-              metadata:
-                name: any
-              spec:
-                template:
-                  metadata:
-                    annotations:
-                      cavisson.io/agent-version: "4.16.0.B94"
 
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
