@@ -1,22 +1,6 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: boutique
-  namespace: boutique
-spec:
-  interval: 5m
-  chart:
-    spec:
-      chart: microservices-demo/release/
-      reconcileStrategy: Revision
-      sourceRef:
-        kind: GitRepository
-        name: boutique
-
----
-apiVersion: helm.toolkit.fluxcd.io/v2
-kind: HelmRelease
-metadata:
   name: cavisson-agent
   namespace: cavisson
 spec:
