@@ -23,13 +23,13 @@ spec:
   values:
     cmon:
       image:
-        tag: "4.16.0.B94"
+        tag: "4.16.0.B96"
     cavproxy:
       image:
-        tag: "4.16.0.B94"
+        tag: "4.16.0.B96"
     webhook:
       image:
-        tag: "4.16.0.B94"
+        tag: "4.16.0.B96"
     clusterAgent:
       image:
-        tag: "4.16.0.B94"
+        tag: "4.16.0.B96"
